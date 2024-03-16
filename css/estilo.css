@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    /* padding: 90px 20px 0; */
+}
+
+.header {
+    background-color:transparent;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+    background-color: #034574;
+    transition: 0.5s;
+}
+
+/* TOGGLE */
+.nav-toggle {
+
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 30px;
+
+    display: none;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 764px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .header {
+        height: 60px;
+        background-color:#333 !important;
+    }
+
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: #2c5783;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-menu-link:hover{
+        background: none;
+        color: #83c5f7;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-toggle img{
+        max-width: 40px;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .nav-toggle:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
+
+
+
+
+main {
+    background-image: url('../img/inicio.jpg');
+    /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* Utiliza toda la altura de la pantalla */
+    padding-top: 50px;
+    /* Espacio para la barra de menú */
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin-top: 200px;
+
+}
+
+section div h2{
+    margin-top: 20rem;
+}
